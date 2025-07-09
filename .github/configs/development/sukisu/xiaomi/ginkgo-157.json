@@ -2,18 +2,18 @@
   "kernelSource": {
     "device": "ginkgo",
     "vendor": "xiaomi",
-    "name": "sukisu-ultra-susfs-157",
+    "name": "vanilla",
     "defconfig": "vendor/ginkgo-perf_defconfig",
     "extraConfig": "",
     "repo": "https://github.com/kernel-build-from-rainyland/android_kernel_xiaomi_ginkgo",
-    "branch": "fourteen/dynamic"
+    "branch": "fourteen/main"
   },
   "kp": {
     "use": false,
     "kpimg_link": "https://github.com/SukiSU-Ultra/SukiSU_KernelPatch_patch/releases/download/0.12.0/kpimg"
   },
   "kernelsu": {
-    "enable": true,
+    "enable": false,
     "setupLink": "https://raw.githubusercontent.com/kernel-build-from-rainyland/SukiSU-Ultra/main/kernel/setup.sh",
     "setupArg": "susfs-1.5.7",
     "setupName": "KernelSU",
@@ -64,7 +64,7 @@
     "use": true,
     "release": true,
     "repo": "https://github.com/kutemeikito/AnyKernel3",
-    "branch": "dynamic"
+    "branch": "main"
   },
   "image": {
     "use": false,
