@@ -331,42 +331,35 @@ jobs:
           args: ${{ steps.generate-args.outputs.args }}
         run: |
           echo "PATH Variable: $PATH"
-          make KCFLAGS="-O2" ${{ env.args }}
+          make KCFLAGS="-O2" ${{ env.args }} Image.gz-dtb dtbo.img
       - name: "Push to out_kernel folder and download ramdisk"
         env:
           arch: ${{ steps.generate-args.outputs.ARCH }}
         run: |
           mkdir out_kernel
           ls -al ${{ env.OUT_DIR }}/arch/${{ env.arch }}/boot
-          if [[ "${{ env.use_dtb }}" == "true" ]]; then
-            cp -f ${{ env.OUT_DIR }}/arch/${{ env.arch }}/boot/Image.gz-dtb ./out_kernel
-            cd out_kernel
+          cp -f ${{ env.OUT_DIR }}/arch/${{ env.arch }}/boot/Image.gz-dtb ./out_kernel
+          cp -f ${{ env.OUT_DIR }}/arch/${{ env.arch }}/boot/dtbo.img ./out_kernel
+          cd out_kernel
 
-            echo "[Rainy's Image.gz-dtb extractor] Getting DTB offset from Image.gz-dtb..."
-            OFFSET=$(binwalk "Image.gz-dtb" | grep "Flattened device tree" | awk '{print $1}')
-            if [ -z "$OFFSET" ]; then
-              echo "[Rainy's Image.gz-dtb extractor] Could not find DTB in Image.gz-dtb"
-              exit 1
-            fi
-
-            echo "[Rainy's Image.gz-dtb extractor] Found DTB offset at $OFFSET"
-
-            echo "[Rainy's Image.gz-dtb extractor] Extracting kernel (gzip part)..."
-            dd if="Image.gz-dtb" of="Image.gz" bs=1 count="$OFFSET" status=none
-
-            echo "[Rainy's Image.gz-dtb extractor] Extracting DTB..."
-            dd if="Image.gz-dtb" of="dtb" bs=1 skip="$OFFSET" status=none
-
-            echo "[Rainy's Image.gz-dtb extractor] Decompressing kernel gzip to raw Image..."
-            gzip -cd "Image.gz" > "Image"
-
-            echo "[Rainy's Image.gz-dtb extractor] Done"
-
-            rm -rf Image.gz Image.gz-dtb
-            cd ..
-          else
-            cp -f ${{ env.OUT_DIR }}/arch/${{ env.arch }}/boot/Image ./out_kernel/
+          echo "[Rainy's Image.gz-dtb extractor] Getting DTB offset from Image.gz-dtb..."
+          OFFSET=$(binwalk "Image.gz-dtb" | grep "Flattened device tree" | awk '{print $1}')
+          if [ -z "$OFFSET" ]; then
+            echo "[Rainy's Image.gz-dtb extractor] Could not find DTB in Image.gz-dtb"
+            exit 1
           fi
+          echo "[Rainy's Image.gz-dtb extractor] Found DTB offset at $OFFSET"
+          echo "[Rainy's Image.gz-dtb extractor] Extracting kernel (gzip part)..."
+          dd if="Image.gz-dtb" of="Image.gz" bs=1 count="$OFFSET" status=none
+          echo "[Rainy's Image.gz-dtb extractor] Extracting DTB..."
+          dd if="Image.gz-dtb" of="dtb" bs=1 skip="$OFFSET" status=none
+          echo "[Rainy's Image.gz-dtb extractor] Decompressing kernel gzip to raw Image..."
+          gzip -cd "Image.gz" > "Image"
+          echo "[Rainy's Image.gz-dtb extractor] Done"
+
+          rm -rf Image.gz Image.gz-dtb
+          cd ..
+
           ls -al ./out_kernel/
       - name: "Patch with kernel patch"
         if: ${{ env.useKernelPatch == 'true' }}

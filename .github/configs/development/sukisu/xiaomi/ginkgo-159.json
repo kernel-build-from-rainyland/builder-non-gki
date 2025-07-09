@@ -8,7 +8,6 @@
     "repo": "https://github.com/kernel-build-from-rainyland/android_kernel_xiaomi_ginkgo",
     "branch": "susfs-159"
   },
-  "use_dtb": true,
   "kp": {
     "use": false,
     "kpimg_link": "https://github.com/SukiSU-Ultra/SukiSU_KernelPatch_patch/releases/download/0.12.0/kpimg"
@@ -23,8 +22,8 @@
   },
   "toolchains": [
     {
-      "repo": "https://gitlab.com/sarthakroy2002/android_prebuilts_clang_host_linux-x86_clang-r437112b",
-      "branch": "master",
+      "repo": "https://gitlab.com/kutemeikito/rastamod69-clang",
+      "branch": "clang-21.0",
       "name": "clang-AOSP",
       "binPath": ["./bin"]
     }

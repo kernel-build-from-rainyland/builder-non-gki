@@ -8,7 +8,6 @@
     "repo": "https://github.com/kernel-build-from-rainyland/kernel_xiaomi_pipa",
     "branch": "susfs-158"
   },
-  "use_dtb": false,
   "kp": {
     "use": false,
     "kpimg_link": "https://github.com/SukiSU-Ultra/SukiSU_KernelPatch_patch/releases/download/0.12.0/kpimg"
