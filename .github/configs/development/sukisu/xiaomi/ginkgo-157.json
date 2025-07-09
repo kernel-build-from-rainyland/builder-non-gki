@@ -5,7 +5,7 @@
     "name": "sukisu-ultra-susfs-157",
     "defconfig": "vendor/ginkgo-perf_defconfig",
     "extraConfig": "",
-    "repo": "https://github.com/kutemeikito/android_kernel_xiaomi_ginkgo",
+    "repo": "https://github.com/kernel-build-from-rainyland/android_kernel_xiaomi_ginkgo",
     "branch": "fourteen/dynamic"
   },
   "kp": {
