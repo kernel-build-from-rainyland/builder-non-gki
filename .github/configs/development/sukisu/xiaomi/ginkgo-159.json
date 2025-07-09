@@ -24,32 +24,40 @@
     {
       "repo": "https://gitlab.com/kutemeikito/rastamod69-clang",
       "branch": "clang-21.0",
-      "name": "clang-AOSP",
+      "name": "toolchain/clang-AOSP",
+      "binPath": ["./bin"]
+    },
+    {
+      "repo": "https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9",
+      "branch": "lineage-19.1",
+      "name": "toolchain/aarch64-linux-android-4.9",
+      "binPath": ["./bin"]
+    },
+    {
+      "repo": "https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9",
+      "branch": "lineage-19.1",
+      "name": "toolchain/arm-linux-androideabi-4.9",
       "binPath": ["./bin"]
     }
   ],
   "ccache": true,
   "params": {
     "ARCH": "arm64",
-    "CC": "clang-AOSP/bin/clang",
+    "CC": "toolchain/clang-AOSP/bin/clang",
     "externalCommand": {
       "KBUILD_BUILD_HOST": "perfc.org",
       "KBUILD_BUILD_USER": "rainyxeon",
-      "CROSS_COMPILE": "clang-AOSP/bin/aarch64-linux-gnu-",
-      "CROSS_COMPILE_ARM32": "clang-AOSP/bin/arm-linux-gnueabi-",
-      "LD": "clang-AOSP/bin/ld.lld",
-      "LLVM": "1",
-      "LLVM_IAS": "1",
-      "AR": "clang-AOSP/bin/llvm-ar",
-      "NM": "clang-AOSP/bin/llvm-nm",
-      "OBJCOPY": "clang-AOSP/bin/llvm-objcopy",
-      "OBJDUMP": "clang-AOSP/bin/llvm-objdump",
-      "READELF": "clang-AOSP/bin/llvm-readelf",
-      "OBJSIZE": "clang-AOSP/bin/llvm-size",
-      "STRIP": "clang-AOSP/bin/llvm-strip",
-      "LDGOLD": "clang-AOSP/bin/aarch64-linux-gnu-ld.gold",
-      "LLVM_AR": "clang-AOSP/bin/llvm-ar",
-      "LLVM_DIS": "clang-AOSP/bin/llvm-dis"
+      "CC": "toolchain/clang-AOSP/bin/clang",
+      "LD": "toolchain/clang-AOSP/bin/ld.lld",
+      "AR": "toolchain/clang-AOSP/bin/llvm-ar",
+      "AS": "toolchain/clang-AOSP/bin/llvm-as",
+      "NM": "toolchain/clang-AOSP/bin/llvm-nm",
+      "OBJCOPY": "toolchain/clang-AOSP/bin/llvm-objcopy",
+      "OBJDUMP": "toolchain/clang-AOSP/bin/llvm-objdump",
+      "STRIP": "toolchain/clang-AOSP/bin/llvm-strip",
+      "CROSS_COMPILE": "toolchain/aarch64-linux-android-4.9/bin/aarch64-linux-android-",
+      "CROSS_COMPILE_COMPAT": "toolchain/clang-AOSP/bin/arm-linux-androideabi-",
+      "CLANG_TRIPLE": "toolchain/clang-AOSP/bin/aarch64-linux-gnu-"
     }
   },
   "AnyKernel3": {
