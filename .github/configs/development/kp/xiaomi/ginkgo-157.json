@@ -1,30 +1,30 @@
 {
   "kernelSource": {
-    "device": "ruby",
+    "device": "ginkgo",
     "vendor": "xiaomi",
-    "name": "kernelpatch",
-    "defconfig": "ruby_defconfig",
+    "name": "sukisu-ultra-susfs-157",
+    "defconfig": "vendor/ginkgo-perf_defconfig",
     "extraConfig": "",
-    "repo": "https://github.com/kernel-build-from-rainyland/kernel_xiaomi_ruby",
-    "branch": "main"
+    "repo": "https://github.com/kernel-build-from-rainyland/android_kernel_xiaomi_ginkgo",
+    "branch": "fourteen/dynamic"
   },
-  "use_dtb": false,
+  "use_dtb": true,
   "kp": {
-    "use": true,
-    "kpimg_link": "https://github.com/kernel-build-from-rainyland/StarifyBuilder/releases/download/cloud/kpimg"
-  }, 
+    "use": false,
+    "kpimg_link": "https://github.com/SukiSU-Ultra/SukiSU_KernelPatch_patch/releases/download/0.12.0/kpimg"
+  },
   "kernelsu": {
-    "enable": false,
-    "setupLink": "",
-    "setupArg": "",
-    "setupName": "",
+    "enable": true,
+    "setupLink": "https://raw.githubusercontent.com/kernel-build-from-rainyland/SukiSU-Ultra/main/kernel/setup.sh",
+    "setupArg": "susfs-1.5.7",
+    "setupName": "KernelSU",
     "needPatch": false,
     "susfsLink": ""
   },
   "toolchains": [
     {
-      "url": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r547379.tar.gz",
-      "branch": "15.0",
+      "repo": "https://gitlab.com/sarthakroy2002/android_prebuilts_clang_host_linux-x86_clang-r437112b",
+      "branch": "master",
       "name": "clang-AOSP",
       "binPath": ["./bin"]
     }
@@ -53,15 +53,15 @@
       "LLVM_DIS": "clang-AOSP/bin/llvm-dis"
     }
   },
-  "image": {
-    "use": false,
-    "imageUrl": "https://github.com/kernel-build-from-rainyland/kernel_xiaomi_ruby/releases/download/cloud/boot.img",
-    "imageName": "boot.img"
-  },
   "AnyKernel3": {
     "use": true,
     "release": true,
-    "repo": "https://github.com/kernel-build-from-rainyland/AnyKernel3",
-    "branch": "ruby"
+    "repo": "https://github.com/kutemeikito/AnyKernel3",
+    "branch": "dynamic"
+  },
+  "image": {
+    "use": false,
+    "imageUrl": "",
+    "imageName": ""
   }
 }

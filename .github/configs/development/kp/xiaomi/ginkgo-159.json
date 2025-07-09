@@ -16,7 +16,7 @@
   "kernelsu": {
     "enable": true,
     "setupLink": "https://raw.githubusercontent.com/kernel-build-from-rainyland/SukiSU-Ultra/main/kernel/setup.sh",
-    "setupArg": "susfs-1.5.7",
+    "setupArg": "susfs-revert",
     "setupName": "KernelSU",
     "needPatch": false,
     "susfsLink": ""
