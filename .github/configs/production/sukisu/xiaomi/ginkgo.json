@@ -8,7 +8,7 @@
     "repo": "https://github.com/kernel-build-from-rainyland/android_kernel_xiaomi_ginkgo",
     "branch": "susfs-159"
   },
-  "use_dtb": false,
+  "use_dtb": true,
   "kp": {
     "use": true,
     "kpimg_link": "https://github.com/SukiSU-Ultra/SukiSU_KernelPatch_patch/releases/download/0.12.0/kpimg"
@@ -56,8 +56,8 @@
   "AnyKernel3": {
     "use": true,
     "release": true,
-    "repo": "https://github.com/kernel-build-from-rainyland/AnyKernel3",
-    "branch": "xiaomi_ginkgo"
+    "repo": "https://github.com/kutemeikito/AnyKernel3",
+    "branch": "dynamic"
   },
   "image": {
     "use": false,
