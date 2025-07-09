@@ -381,15 +381,9 @@ jobs:
           ls -al
           cp -f -r ./out_kernel/. ./AnyKernel3/
           cd AnyKernel3/
-          if [[ "${{ env.use_dtb }}" != "true" ]]; then
-            mv ./Image ./PreImage
-            gzip -c ./PreImage > ./Image.gz
-            rm -rf ./PreImage
-          else
-            gzip -c Image > Image.gz
-            cat Image.gz dtb > Image.gz-dtb
-            rm -rf Image Image.gz dtb
-          fi
+          gzip -c Image > Image.gz
+          cat Image.gz dtb > Image.gz-dtb
+          rm -rf Image Image.gz dtb
           zip -q -r "anykernel-${{ env.KERNEL_NAME }}-${{ env.KERNEL_DEVICE_VENDOR }}-${{ env.KERNEL_DEVICE }}-${{ env.builddate }}-${{ github.run_number }}" *
       - name: "Upload AnyKernel3 image"
         uses: actions/upload-artifact@v4
