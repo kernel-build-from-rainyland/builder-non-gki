@@ -6,7 +6,7 @@
       "name": "test_builder",
       "defconfig": "blossom_defconfig",
       "extraConfig": "",
-      "repo": "https://gitlab.com/RainyXeon/extremeNiigo-kernel-xiaomi-blossom",
+      "repo": "https://gitlab.com/namb20994/extremeNiigo-kernel-xiaomi-blossom",
       "branch": "yoka_rb1"
     },
     "output_image": "Image.gz",
@@ -27,8 +27,8 @@
     },
     "toolchains": [
       {
-        "repo": "https://gitlab.com/RainyXeon/clang-r530567.git",
-        "branch": "14.0",
+        "repo": "https://gitlab.com/RainyXeon/clang-r487747c.git",
+        "branch": "master",
         "name": "clang-AOSP",
         "binPath": ["/bin"]
       }
