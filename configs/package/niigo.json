@@ -3,13 +3,13 @@
     "kernelSource": {
       "device": "blossom",
       "vendor": "xiaomi",
-      "name": "test_builder",
+      "name": "extended_niigo",
       "defconfig": "blossom_defconfig",
       "extraConfig": "",
-      "repo": "https://gitlab.com/namb20994/extremeNiigo-kernel-xiaomi-blossom",
+      "repo": "https://github.com/RainyXeon/extendedNiigo_kernel_xiaomi_blossom",
       "branch": "yoka_rb1"
     },
-    "output_image": "Image.gz",
+    "output_image": "Image.gz-dtb",
     "use_python2": false,
     "additional_script_link": "",
     "additional_post_script_link": "disabled",
@@ -27,8 +27,8 @@
     },
     "toolchains": [
       {
-        "repo": "https://gitlab.com/RainyXeon/clang-r487747c.git",
-        "branch": "master",
+        "repo": "https://gitlab.com/RainyXeon/clang-r530567.git",
+        "branch": "14.0",
         "name": "clang-AOSP",
         "binPath": ["/bin"]
       }
