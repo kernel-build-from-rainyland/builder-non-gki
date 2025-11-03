@@ -9,9 +9,9 @@
       "repo": "https://github.com/RainyXeon/extendedNiigo_kernel_xiaomi_blossom",
       "branch": "yoka_rb1"
     },
-    "output_image": "Image.gz-dtb",
+    "output_image": "Image.gz",
     "use_python2": false,
-    "additional_script_link": "",
+    "additional_script_link": "disabled",
     "additional_post_script_link": "disabled",
     "kp": {
       "use": false,
@@ -27,8 +27,8 @@
     },
     "toolchains": [
       {
-        "repo": "https://gitlab.com/RainyXeon/clang-r530567.git",
-        "branch": "14.0",
+        "repo": "https://gitlab.com/RainyXeon/clang-r498229b.git",
+        "branch": "master",
         "name": "clang-AOSP",
         "binPath": ["/bin"]
       }
@@ -67,7 +67,7 @@
       "use": true,
       "release": true,
       "repo": "https://github.com/kernel-build-from-rainyland/AnyKernel3",
-      "branch": "ruby_custom"
+      "branch": "blossom"
     }
   }
 ]
