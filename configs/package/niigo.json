@@ -6,7 +6,7 @@
       "name": "extended_niigo",
       "defconfig": "blossom_defconfig",
       "extraConfig": "",
-      "repo": "https://github.com/RainyXeon/extendedNiigo_kernel_xiaomi_blossom",
+      "repo": "https://gitlab.com/DR-KernelArchive/kernel/extendedNiigo_kernel_xiaomi_blossom.git",
       "branch": "yoka_rb1"
     },
     "output_image": "Image.gz",
