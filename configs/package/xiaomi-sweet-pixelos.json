@@ -27,7 +27,7 @@
     },
     "toolchains": [
       {
-        "repo": "https://gitlab.com/RainyXeon/clang-r547379.git",
+        "repo": "https://gitlab.com/DR-KernelArchive/clang/r547379.git",
         "branch": "master",
         "name": "clang-AOSP",
         "binPath": ["/bin"]
@@ -88,7 +88,7 @@
     },
     "toolchains": [
       {
-        "repo": "https://gitlab.com/RainyXeon/clang-r547379.git",
+        "repo": "https://gitlab.com/DR-KernelArchive/clang/r547379.git",
         "branch": "master",
         "name": "clang-AOSP",
         "binPath": ["/bin"]

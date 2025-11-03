@@ -27,7 +27,7 @@
     },
     "toolchains": [
       {
-        "repo": "https://gitlab.com/RainyXeon/clang-r530567.git",
+        "repo": "https://gitlab.com/DR-KernelArchive/clang/r530567.git",
         "branch": "14.0",
         "name": "clang-AOSP",
         "binPath": ["/bin"]
@@ -97,7 +97,7 @@
     },
     "toolchains": [
       {
-        "repo": "https://gitlab.com/RainyXeon/clang-r530567.git",
+        "repo": "https://gitlab.com/DR-KernelArchive/clang/r530567.git",
         "branch": "14.0",
         "name": "clang-AOSP",
         "binPath": ["/bin"]
@@ -167,7 +167,7 @@
     },
     "toolchains": [
       {
-        "repo": "https://gitlab.com/RainyXeon/clang-r530567.git",
+        "repo": "https://gitlab.com/DR-KernelArchive/clang/r530567.git",
         "branch": "14.0",
         "name": "clang-AOSP",
         "binPath": ["/bin"]
@@ -238,7 +238,7 @@
     },
     "toolchains": [
       {
-        "repo": "https://gitlab.com/RainyXeon/clang-r563880",
+        "repo": "https://gitlab.com/DR-KernelArchive/clang/r563880",
         "branch": "main",
         "name": "clang-AOSP",
         "binPath": ["/bin"]
