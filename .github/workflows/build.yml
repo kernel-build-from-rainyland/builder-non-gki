@@ -360,6 +360,11 @@ jobs:
             cd scripts
             sed -i 's/ -dirty//g' setlocalversion
           fi
+      - name: "Run Additional Script"
+        working-directory: ${{ env.KERNEL_NAME }}
+        if: ${{ env.additional_script_link != 'disabled' }}
+        run: |
+          curl -LSs "${{ env.additional_script_link }}" | bash
       - name: "Make defconfig"
         working-directory: ${{ env.KERNEL_NAME }}
         env:
@@ -376,11 +381,6 @@ jobs:
             echo "PATH Variable: $PATH"
             make ${{ env.args }} ${{ env.DEFCONFIG_NAME }}
           fi
-      - name: "Run Additional Script"
-        working-directory: ${{ env.KERNEL_NAME }}
-        if: ${{ env.additional_script_link != 'disabled' }}
-        run: |
-          curl -LSs "${{ env.additional_script_link }}" | bash
       - name: "Build kernel"
         working-directory: ${{ env.KERNEL_NAME }}
         env:

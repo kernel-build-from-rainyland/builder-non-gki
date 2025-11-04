@@ -11,7 +11,7 @@
     },
     "output_image": "Image.gz",
     "use_python2": false,
-    "additional_script_link": "disabled",
+    "additional_script_link": "https://github.com/kernel-build-from-rainyland/builder-non-gki/raw/main/scripts/niigo.sh",
     "additional_post_script_link": "disabled",
     "kp": {
       "use": false,
