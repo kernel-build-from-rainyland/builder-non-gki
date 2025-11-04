@@ -49,7 +49,7 @@
     "params": {
       "ARCH": "arm64",
       "CC": "toolchain/clang-AOSP/bin/clang",
-      "KCFLAGS": "-O2",
+      "KCFLAGS": "-O3",
       "build_out": "Image.gz-dtb dtbo.img",
       "externalCommand": {
         "KBUILD_BUILD_HOST": "perfc.org",

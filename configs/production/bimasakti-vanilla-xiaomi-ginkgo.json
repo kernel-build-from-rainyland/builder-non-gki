@@ -1,0 +1,233 @@
+[
+  {
+    "kernelSource": {
+      "device": "ginkgo",
+      "vendor": "xiaomi",
+      "name": "bimasakti-vanilla",
+      "defconfig": "vendor/ginkgo-perf-noksu_defconfig",
+      "extraConfig": "",
+      "repo": "https://github.com/kernel-build-from-rainyland/android_kernel_xiaomi_ginkgo",
+      "branch": "revert-29-4"
+    },
+    "output_image": "Image.gz-dtb",
+    "use_python2": true,
+    "kp": {
+      "use": false,
+      "kpimg_link": "https://github.com/SukiSU-Ultra/SukiSU_KernelPatch_patch/releases/download/0.12.0/kpimg"
+    },
+    "kernelsu": {
+      "enable": false,
+      "setupLink": "https://raw.githubusercontent.com/kernel-build-from-rainyland/SukiSU-Ultra/main/kernel/setup.sh",
+      "setupArg": "susfs-revert",
+      "setupName": "KernelSU",
+      "needPatch": false,
+      "susfsLink": ""
+    },
+    "toolchains": [
+      {
+        "repo": "https://gitlab.com/kutemeikito/rastamod69-clang",
+        "branch": "clang-21.0",
+        "name": "toolchain/clang-AOSP",
+        "binPath": ["/bin"]
+      },
+      {
+        "repo": "https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9",
+        "branch": "lineage-19.1",
+        "name": "toolchain/aarch64-linux-android-4.9",
+        "binPath": ["/bin"]
+      },
+      {
+        "repo": "https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9",
+        "branch": "lineage-19.1",
+        "name": "toolchain/arm-linux-androideabi-4.9",
+        "binPath": ["/bin"]
+      }
+    ],
+    "ccache": true,
+    "params": {
+      "ARCH": "arm64",
+      "CC": "toolchain/clang-AOSP/bin/clang",
+      "KCFLAGS": "-O3",
+      "build_out": "Image.gz-dtb dtbo.img",
+      "externalCommand": {
+        "KBUILD_BUILD_HOST": "perfc.org",
+        "KBUILD_BUILD_USER": "rainyxeon",
+        "CC": "toolchain/clang-AOSP/bin/clang",
+        "LD": "toolchain/clang-AOSP/bin/ld.lld",
+        "AR": "toolchain/clang-AOSP/bin/llvm-ar",
+        "AS": "toolchain/clang-AOSP/bin/llvm-as",
+        "NM": "toolchain/clang-AOSP/bin/llvm-nm",
+        "OBJCOPY": "toolchain/clang-AOSP/bin/llvm-objcopy",
+        "OBJDUMP": "toolchain/clang-AOSP/bin/llvm-objdump",
+        "STRIP": "toolchain/clang-AOSP/bin/llvm-strip",
+        "CROSS_COMPILE": "toolchain/aarch64-linux-android-4.9/bin/aarch64-linux-android-",
+        "CROSS_COMPILE_COMPAT": "toolchain/clang-AOSP/bin/arm-linux-androideabi-",
+        "CLANG_TRIPLE": "toolchain/clang-AOSP/bin/aarch64-linux-gnu-"
+      }
+    },
+    "AnyKernel3": {
+      "use": true,
+      "release": true,
+      "repo": "https://github.com/kernel-build-from-rainyland/AnyKernel3",
+      "branch": "xiaomi_ginkgo"
+    },
+    "image": {
+      "use": false,
+      "imageUrl": ""
+    }
+  },
+  {
+    "kernelSource": {
+      "device": "ginkgo",
+      "vendor": "xiaomi",
+      "name": "bimasakti-vanilla-nondynamic",
+      "defconfig": "vendor/ginkgo-perf-noksu_defconfig",
+      "extraConfig": "vendor/ginkgo_non_a11.config",
+      "repo": "https://github.com/kernel-build-from-rainyland/android_kernel_xiaomi_ginkgo",
+      "branch": "revert-29-4-nondynamic"
+    },
+    "output_image": "Image.gz-dtb",
+    "use_python2": true,
+    "kp": {
+      "use": false,
+      "kpimg_link": "https://github.com/SukiSU-Ultra/SukiSU_KernelPatch_patch/releases/download/0.12.0/kpimg"
+    },
+    "kernelsu": {
+      "enable": false,
+      "setupLink": "https://raw.githubusercontent.com/kernel-build-from-rainyland/SukiSU-Ultra/main/kernel/setup.sh",
+      "setupArg": "susfs-revert",
+      "setupName": "KernelSU",
+      "needPatch": false,
+      "susfsLink": ""
+    },
+    "toolchains": [
+      {
+        "repo": "https://gitlab.com/kutemeikito/rastamod69-clang",
+        "branch": "clang-21.0",
+        "name": "toolchain/clang-AOSP",
+        "binPath": ["/bin"]
+      },
+      {
+        "repo": "https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9",
+        "branch": "lineage-19.1",
+        "name": "toolchain/aarch64-linux-android-4.9",
+        "binPath": ["/bin"]
+      },
+      {
+        "repo": "https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9",
+        "branch": "lineage-19.1",
+        "name": "toolchain/arm-linux-androideabi-4.9",
+        "binPath": ["/bin"]
+      }
+    ],
+    "ccache": true,
+    "params": {
+      "ARCH": "arm64",
+      "CC": "toolchain/clang-AOSP/bin/clang",
+      "KCFLAGS": "-O3",
+      "build_out": "Image.gz-dtb dtbo.img",
+      "externalCommand": {
+        "KBUILD_BUILD_HOST": "perfc.org",
+        "KBUILD_BUILD_USER": "rainyxeon",
+        "CC": "toolchain/clang-AOSP/bin/clang",
+        "LD": "toolchain/clang-AOSP/bin/ld.lld",
+        "AR": "toolchain/clang-AOSP/bin/llvm-ar",
+        "AS": "toolchain/clang-AOSP/bin/llvm-as",
+        "NM": "toolchain/clang-AOSP/bin/llvm-nm",
+        "OBJCOPY": "toolchain/clang-AOSP/bin/llvm-objcopy",
+        "OBJDUMP": "toolchain/clang-AOSP/bin/llvm-objdump",
+        "STRIP": "toolchain/clang-AOSP/bin/llvm-strip",
+        "CROSS_COMPILE": "toolchain/aarch64-linux-android-4.9/bin/aarch64-linux-android-",
+        "CROSS_COMPILE_COMPAT": "toolchain/clang-AOSP/bin/arm-linux-androideabi-",
+        "CLANG_TRIPLE": "toolchain/clang-AOSP/bin/aarch64-linux-gnu-"
+      }
+    },
+    "AnyKernel3": {
+      "use": true,
+      "release": true,
+      "repo": "https://github.com/kernel-build-from-rainyland/AnyKernel3",
+      "branch": "xiaomi_ginkgo-nondynamic"
+    },
+    "image": {
+      "use": false,
+      "imageUrl": ""
+    }
+  },
+  {
+    "kernelSource": {
+      "device": "ginkgo",
+      "vendor": "xiaomi",
+      "name": "bimasakti-vanilla-nondynamic-a11",
+      "defconfig": "vendor/ginkgo-perf-noksu_defconfig",
+      "extraConfig": "",
+      "repo": "https://github.com/kernel-build-from-rainyland/android_kernel_xiaomi_ginkgo",
+      "branch": "revert-29-4-nondynamic"
+    },
+    "output_image": "Image.gz-dtb",
+    "use_python2": true,
+    "kp": {
+      "use": false,
+      "kpimg_link": "https://github.com/SukiSU-Ultra/SukiSU_KernelPatch_patch/releases/download/0.12.0/kpimg"
+    },
+    "kernelsu": {
+      "enable": false,
+      "setupLink": "https://raw.githubusercontent.com/kernel-build-from-rainyland/SukiSU-Ultra/main/kernel/setup.sh",
+      "setupArg": "susfs-revert",
+      "setupName": "KernelSU",
+      "needPatch": false,
+      "susfsLink": ""
+    },
+    "toolchains": [
+      {
+        "repo": "https://gitlab.com/kutemeikito/rastamod69-clang",
+        "branch": "clang-21.0",
+        "name": "toolchain/clang-AOSP",
+        "binPath": ["/bin"]
+      },
+      {
+        "repo": "https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9",
+        "branch": "lineage-19.1",
+        "name": "toolchain/aarch64-linux-android-4.9",
+        "binPath": ["/bin"]
+      },
+      {
+        "repo": "https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9",
+        "branch": "lineage-19.1",
+        "name": "toolchain/arm-linux-androideabi-4.9",
+        "binPath": ["/bin"]
+      }
+    ],
+    "ccache": true,
+    "params": {
+      "ARCH": "arm64",
+      "CC": "toolchain/clang-AOSP/bin/clang",
+      "KCFLAGS": "-O3",
+      "build_out": "Image.gz-dtb dtbo.img",
+      "externalCommand": {
+        "KBUILD_BUILD_HOST": "perfc.org",
+        "KBUILD_BUILD_USER": "rainyxeon",
+        "CC": "toolchain/clang-AOSP/bin/clang",
+        "LD": "toolchain/clang-AOSP/bin/ld.lld",
+        "AR": "toolchain/clang-AOSP/bin/llvm-ar",
+        "AS": "toolchain/clang-AOSP/bin/llvm-as",
+        "NM": "toolchain/clang-AOSP/bin/llvm-nm",
+        "OBJCOPY": "toolchain/clang-AOSP/bin/llvm-objcopy",
+        "OBJDUMP": "toolchain/clang-AOSP/bin/llvm-objdump",
+        "STRIP": "toolchain/clang-AOSP/bin/llvm-strip",
+        "CROSS_COMPILE": "toolchain/aarch64-linux-android-4.9/bin/aarch64-linux-android-",
+        "CROSS_COMPILE_COMPAT": "toolchain/clang-AOSP/bin/arm-linux-androideabi-",
+        "CLANG_TRIPLE": "toolchain/clang-AOSP/bin/aarch64-linux-gnu-"
+      }
+    },
+    "AnyKernel3": {
+      "use": true,
+      "release": true,
+      "repo": "https://github.com/kernel-build-from-rainyland/AnyKernel3",
+      "branch": "xiaomi_ginkgo-nondynamic"
+    },
+    "image": {
+      "use": false,
+      "imageUrl": ""
+    }
+  }
+]

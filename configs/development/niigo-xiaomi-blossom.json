@@ -37,7 +37,7 @@
     "params": {
       "ARCH": "arm64",
       "CC": "clang-AOSP/bin/clang",
-      "KCFLAGS": "-O2 -march=armv8.2-a+crypto+fp16+dotprod -mcpu=cortex-a78 -mtune=cortex-a78",
+      "KCFLAGS": "-O3 -march=armv8.2-a+crypto+fp16+dotprod -mcpu=cortex-a78 -mtune=cortex-a78",
       "build_out": "Image.gz",
       "externalCommand": {
         "KBUILD_BUILD_HOST": "personal.deepinrain",
