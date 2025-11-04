@@ -1,21 +1,21 @@
-﻿[
+[
   {
     "kernelSource": {
       "device": "ruby",
       "vendor": "xiaomi",
-      "name": "kernelpatch",
+      "name": "hypermoon-experimental",
       "defconfig": "ruby_defconfig",
       "extraConfig": "",
-      "repo": "https://github.com/RainyXeon/kernel_xiaomi_ruby",
+      "repo": "https://github.com/DeepinRain/hos3_moonwake_kernel_xiaomi_ruby",
       "branch": "main"
     },
-    "output_image": "Image",
+    "output_image": "Image.gz",
     "use_python2": false,
-    "additional_script_link": "disabled",
+    "additional_script_link": "https://github.com/kernel-build-from-rainyland/builder-non-gki/raw/main/scripts/xiaomi_ruby/hos3-exp-version.sh",
     "additional_post_script_link": "disabled",
     "kp": {
-      "use": true,
-      "kpimg_link": "https://github.com/bmax121/KernelPatch/releases/download/0.12.0/kpimg-android"
+      "use": false,
+      "kpimg_link": ""
     },
     "kernelsu": {
       "enable": false,
@@ -27,18 +27,18 @@
     },
     "toolchains": [
       {
-        "repo": "https://gitlab.com/DR-KernelArchive/clang/r563880.git",
-        "branch": "main",
+        "repo": "https://github.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-6443078",
+        "branch": "10.0",
         "name": "clang-AOSP",
         "binPath": ["/bin"]
       }
     ],
-    "ccache": true,
+    "ccache": false,
     "params": {
       "ARCH": "arm64",
       "CC": "clang-AOSP/bin/clang",
-      "KCFLAGS": "-O2",
-      "build_out": "Image.gz-dtb",
+      "KCFLAGS": "",
+      "build_out": "Image.gz",
       "externalCommand": {
         "KBUILD_BUILD_HOST": "perfc.org",
         "KBUILD_BUILD_USER": "rainyxeon",
@@ -60,14 +60,14 @@
       }
     },
     "image": {
-      "use": true,
-      "imageUrl": "https://github.com/kernel-build-from-rainyland/builder-non-gki/releases/download/cloud/xiaomi-ruby-original-boot.img"
+      "use": false,
+      "imageUrl": ""
     },
     "AnyKernel3": {
-      "use": false,
+      "use": true,
       "release": true,
       "repo": "https://github.com/kernel-build-from-rainyland/AnyKernel3",
-      "branch": "ruby"
+      "branch": "ruby_dev"
     }
   }
 ]

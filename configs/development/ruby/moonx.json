@@ -11,7 +11,7 @@
     },
     "output_image": "Image.gz-dtb",
     "use_python2": false,
-    "additional_script_link": "https://github.com/kernel-build-from-rainyland/builder-non-gki/raw/main/scripts/rainy.sh",
+    "additional_script_link": "https://github.com/kernel-build-from-rainyland/builder-non-gki/raw/main/scripts/xiaomi_ruby/rainy.sh",
     "additional_post_script_link": "disabled",
     "kp": {
       "use": false,
@@ -37,7 +37,7 @@
     "params": {
       "ARCH": "arm64",
       "CC": "clang-AOSP/bin/clang",
-      "KCFLAGS": "-O2 -march=armv8.2-a+crypto+fp16+dotprod -mcpu=cortex-a78 -mtune=cortex-a78",
+      "KCFLAGS": "-O3 -march=armv8.2-a+crypto+fp16+dotprod -mcpu=cortex-a78 -mtune=cortex-a78",
       "build_out": "Image.gz-dtb",
       "externalCommand": {
         "KBUILD_BUILD_HOST": "personal.deepinrain",
@@ -82,7 +82,7 @@
     },
     "output_image": "Image.gz-dtb",
     "use_python2": false,
-    "additional_script_link": "https://github.com/kernel-build-from-rainyland/builder-non-gki/raw/main/scripts/rainy.sh",
+    "additional_script_link": "https://github.com/kernel-build-from-rainyland/builder-non-gki/raw/main/scripts/xiaomi_ruby/rainy.sh",
     "additional_post_script_link": "disabled",
     "kp": {
       "use": false,

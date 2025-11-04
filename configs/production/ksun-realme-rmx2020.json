@@ -1,46 +1,46 @@
 [
   {
     "kernelSource": {
-      "device": "spacewar",
-      "vendor": "nothing",
-      "name": "sukisu",
-      "defconfig": "spacewar_defconfig",
+      "device": "RMX2020",
+      "vendor": "realme",
+      "name": "kernelsu-next-susfs-158",
+      "defconfig": "RMX2020_defconfig",
       "extraConfig": "",
-      "repo": "https://github.com/kernel-build-from-rainyland/Spacewar_NOS3.0_Kernel",
-      "branch": "sm7325/v/mr"
+      "repo": "https://github.com/kernel-build-from-rainyland/kernel_realme_RMX2020",
+      "branch": "susfs-158"
     },
-    "output_image": "Image",
+    "output_image": "Image.gz-dtb",
     "use_python2": false,
-    "additional_script_link": "https://github.com/kernel-build-from-rainyland/builder-non-gki/raw/main/scripts/global-version.sh",
-    "additional_post_script_link": "https://github.com/kernel-build-from-rainyland/builder-non-gki/raw/main/scripts/spacewar_post_build.sh",
+    "additional_script_link": "disabled",
+    "additional_post_script_link": "disabled",
     "kp": {
-      "use": true,
+      "use": false,
       "kpimg_link": "https://github.com/SukiSU-Ultra/SukiSU_KernelPatch_patch/releases/download/0.12.0/kpimg"
     },
     "kernelsu": {
       "enable": true,
-      "setupLink": "https://raw.githubusercontent.com/kernel-build-from-rainyland/SukiSU-Ultra/main/kernel/setup.sh",
-      "setupArg": "susfs-legacy",
-      "setupName": "KernelSU",
+      "setupLink": "https://raw.githubusercontent.com/sidex15/KernelSU-Next/refs/heads/next/kernel/setup.sh",
+      "setupArg": "next-susfs",
+      "setupName": "KernelSU-Next",
       "needPatch": false,
       "susfsLink": ""
     },
     "toolchains": [
       {
-        "url": "https://android.googlesource.com/platform//prebuilts/clang/host/linux-x86/+archive/4c6fbc28d3b078a5308894fc175f962bb26a5718/clang-r383902b1.tar.gz",
-        "branch": "14.0",
+        "repo": "https://gitlab.com/sarthakroy2002/android_prebuilts_clang_host_linux-x86_clang-r437112b",
+        "branch": "master",
         "name": "clang-AOSP",
         "binPath": ["/bin"]
       }
     ],
-    "ccache": false,
+    "ccache": true,
     "params": {
       "ARCH": "arm64",
       "CC": "clang-AOSP/bin/clang",
       "KCFLAGS": "-O2",
-      "build_out": "Image",
+      "build_out": "Image.gz-dtb",
       "externalCommand": {
-        "KBUILD_BUILD_HOST": "deepinrain.github.ci",
+        "KBUILD_BUILD_HOST": "perfc.org",
         "KBUILD_BUILD_USER": "rainyxeon",
         "CROSS_COMPILE": "clang-AOSP/bin/aarch64-linux-gnu-",
         "CROSS_COMPILE_ARM32": "clang-AOSP/bin/arm-linux-gnueabi-",
@@ -59,15 +59,15 @@
         "LLVM_DIS": "clang-AOSP/bin/llvm-dis"
       }
     },
-    "image": {
-      "use": false,
-      "imageUrl": ""
-    },
     "AnyKernel3": {
       "use": true,
       "release": true,
-      "repo": "https://github.com/zerofrip/AnyKernel3",
-      "branch": "spacewar_nos3.0"
+      "repo": "https://github.com/kernel-build-from-rainyland/AnyKernel3",
+      "branch": "realme_RMX2020"
+    },
+    "image": {
+      "use": false,
+      "imageUrl": ""
     }
   }
 ]

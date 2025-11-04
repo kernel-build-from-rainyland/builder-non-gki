@@ -10,22 +10,10 @@ on:
         description: "Choose a config type"
         required: true
         type: choice
-        default: "package"
+        default: "production"
         options:
           - production
           - development
-          - package
-      config_mode:
-        description: "Choose a root solution, if this not empty, it will only build that specific type"
-        required: false
-        type: choice
-        default: "everything"
-        options:
-          - everything
-          - ksun
-          - sukisu
-          - vanilla
-          - kp
       config_file:
         description: "Path to a specific config JSON file (optional). Leave blank to use all configs."
         required: false
@@ -67,7 +55,6 @@ jobs:
         run: |
           CONFIG_FILE="${{ github.event.inputs.config_file }}"
           CONFIG_TYPE="${{ github.event.inputs.config_type }}"
-          CONFIG_MODE="${{ github.event.inputs.config_mode }}"
 
           echo "Selected config file: '$CONFIG_FILE'"
 
@@ -88,16 +75,9 @@ jobs:
           else
             # No config_file specified
             echo "No config_file input provided."
-
-            if [[ "$CONFIG_MODE" != "everything" ]]; then
-              echo "Using only files from '$CONFIG_MODE' in configs/$CONFIG_TYPE/"
-              find "configs/$CONFIG_TYPE/${CONFIG_MODE}" -type f -name "*.json"
-              FILES=$(find "configs/$CONFIG_TYPE/${CONFIG_MODE}" -type f -name "*.json")
-            else
-              echo "Using all JSON files in configs/$CONFIG_TYPE/"
-              find "configs/$CONFIG_TYPE" -type f -name "*.json"
-              FILES=$(find "configs/$CONFIG_TYPE" -type f -name '*.json')
-            fi
+            echo "Using all JSON files in configs/$CONFIG_TYPE/"
+            find "configs/$CONFIG_TYPE" -type f -name "*.json"
+            FILES=$(find "configs/$CONFIG_TYPE" -type f -name '*.json')
 
             if [ -z "$FILES" ]; then
               echo "ERROR: No matching JSON config files found!" >&2
@@ -537,13 +517,13 @@ jobs:
         if: ${{ always() && github.event.inputs.release_mode == 'true' }}
         with:
           files: downloaded_kernels/**
-          tag_name: ${{ env.builddate }}.${{ github.run_number }}-${{ github.event.inputs.config_mode }}
-          name: Automation build for ${{ github.event.inputs.config_mode }} from run ${{ github.run_number }}
+          tag_name: dr-kernelarchive-${{ env.builddate }}.${{ github.run_number }}
+          name: Automation build  from run ${{ github.run_number }}
           prerelease: false
           draft: false
           generate_release_notes: false
           body: |
-            Open kernel build from RainyLand. Version `${{ env.builddate }}.${{ github.run_number }}-${{ github.event.inputs.config_mode }}`
+            Open kernel build from RainyLand. Version `dr-kernelarchive-${{ env.builddate }}.${{ github.run_number }}`
             # Installation
             1. Flash the kernel from this release.
             2. Download and install the root manager APK from here (depends on your kernel):
