@@ -27,8 +27,8 @@
     },
     "toolchains": [
       {
-        "repo": "https://gitlab.com/DR-KernelArchive/clang/r563880.git",
-        "branch": "main",
+        "repo": "https://gitlab.com/DR-KernelArchive/clang/r498229b.git",
+        "branch": "master",
         "name": "clang-AOSP",
         "binPath": ["/bin"]
       }
@@ -98,8 +98,8 @@
     },
     "toolchains": [
       {
-        "repo": "https://gitlab.com/DR-KernelArchive/clang/r563880.git",
-        "branch": "main",
+        "repo": "https://gitlab.com/DR-KernelArchive/clang/r498229b.git",
+        "branch": "master",
         "name": "clang-AOSP",
         "binPath": ["/bin"]
       }
