@@ -37,7 +37,7 @@
     "params": {
       "ARCH": "arm64",
       "CC": "clang-AOSP/bin/clang",
-      "KCFLAGS": "-O3 -march=armv8.2-a+crypto+fp16+dotprod -mcpu=cortex-a76 -mtune=cortex-a76",
+      "KCFLAGS": "-O3",
       "build_out": "Image",
       "externalCommand": {
         "KBUILD_BUILD_HOST": "perfc.org",
@@ -108,7 +108,7 @@
     "params": {
       "ARCH": "arm64",
       "CC": "clang-AOSP/bin/clang",
-      "KCFLAGS": "-O3 -march=armv8.2-a+crypto+fp16+dotprod -mcpu=cortex-a76 -mtune=cortex-a76",
+      "KCFLAGS": "-O3",
       "build_out": "Image",
       "externalCommand": {
         "KBUILD_BUILD_HOST": "perfc.org",
