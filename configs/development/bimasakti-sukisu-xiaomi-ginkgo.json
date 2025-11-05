@@ -6,7 +6,7 @@
       "name": "bimasakti-sukisu",
       "defconfig": "vendor/ginkgo-perf_defconfig",
       "extraConfig": "",
-      "repo": "https://github.com/kernel-build-from-rainyland/android_kernel_xiaomi_ginkgo",
+      "repo": "https://github.com/DR-KernelArchive/android_kernel_xiaomi_ginkgo",
       "branch": "revert-16-7"
     },
     "output_image": "Image.gz-dtb",
@@ -19,7 +19,7 @@
     },
     "kernelsu": {
       "enable": true,
-      "setupLink": "https://raw.githubusercontent.com/kernel-build-from-rainyland/SukiSU-Ultra/main/kernel/setup.sh",
+      "setupLink": "https://raw.githubusercontent.com/DR-KernelArchive/SukiSU-Ultra/main/kernel/setup.sh",
       "setupArg": "susfs-revert",
       "setupName": "KernelSU",
       "needPatch": false,
@@ -70,7 +70,7 @@
     "AnyKernel3": {
       "use": true,
       "release": true,
-      "repo": "https://github.com/kernel-build-from-rainyland/AnyKernel3",
+      "repo": "https://github.com/DR-KernelArchive/AnyKernel3",
       "branch": "xiaomi_ginkgo"
     },
     "image": {

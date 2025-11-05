@@ -6,7 +6,7 @@
       "name": "bimasakti-sukisu",
       "defconfig": "vendor/ginkgo-perf_defconfig",
       "extraConfig": "",
-      "repo": "https://github.com/kernel-build-from-rainyland/android_kernel_xiaomi_ginkgo",
+      "repo": "https://github.com/DR-KernelArchive/android_kernel_xiaomi_ginkgo",
       "branch": "revert-29-4"
     },
     "output_image": "Image.gz-dtb",
@@ -70,7 +70,7 @@
     "AnyKernel3": {
       "use": true,
       "release": true,
-      "repo": "https://github.com/kernel-build-from-rainyland/AnyKernel3",
+      "repo": "https://github.com/DR-KernelArchive/AnyKernel3",
       "branch": "xiaomi_ginkgo"
     },
     "image": {
@@ -85,7 +85,7 @@
       "name": "bimasakti-sukisu-nondynamic",
       "defconfig": "vendor/ginkgo-perf_defconfig",
       "extraConfig": "vendor/ginkgo_non_a11.config",
-      "repo": "https://github.com/kernel-build-from-rainyland/android_kernel_xiaomi_ginkgo",
+      "repo": "https://github.com/DR-KernelArchive/android_kernel_xiaomi_ginkgo",
       "branch": "revert-29-4-nondynamic"
     },
     "output_image": "Image.gz-dtb",
@@ -149,7 +149,7 @@
     "AnyKernel3": {
       "use": true,
       "release": true,
-      "repo": "https://github.com/kernel-build-from-rainyland/AnyKernel3",
+      "repo": "https://github.com/DR-KernelArchive/AnyKernel3",
       "branch": "xiaomi_ginkgo-nondynamic"
     },
     "image": {
@@ -164,7 +164,7 @@
       "name": "bimasakti-sukisu-nondynamic-a11",
       "defconfig": "vendor/ginkgo-perf_defconfig",
       "extraConfig": "",
-      "repo": "https://github.com/kernel-build-from-rainyland/android_kernel_xiaomi_ginkgo",
+      "repo": "https://github.com/DR-KernelArchive/android_kernel_xiaomi_ginkgo",
       "branch": "revert-29-4-nondynamic"
     },
     "output_image": "Image.gz-dtb",
@@ -228,7 +228,7 @@
     "AnyKernel3": {
       "use": true,
       "release": true,
-      "repo": "https://github.com/kernel-build-from-rainyland/AnyKernel3",
+      "repo": "https://github.com/DR-KernelArchive/AnyKernel3",
       "branch": "xiaomi_ginkgo-nondynamic"
     },
     "image": {

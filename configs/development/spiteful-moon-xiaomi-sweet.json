@@ -11,7 +11,7 @@
     },
     "output_image": "Image",
     "use_python2": false,
-    "additional_script_link": "https://github.com/kernel-build-from-rainyland/builder-non-gki/raw/main/scripts/xiaomi_sweet/spiteful_moon.sh",
+    "additional_script_link": "https://github.com/DR-KernelArchive/KernelActions/raw/main/scripts/xiaomi_sweet/spiteful_moon.sh",
     "additional_post_script_link": "disabled",
     "kp": {
       "use": false,
@@ -19,7 +19,7 @@
     },
     "kernelsu": {
       "enable": true,
-      "setupLink": "https://raw.githubusercontent.com/kernel-build-from-rainyland/KernelSU-Next/refs/heads/next/kernel/setup.sh",
+      "setupLink": "https://raw.githubusercontent.com/DR-KernelArchive/KernelSU-Next/refs/heads/next/kernel/setup.sh",
       "setupArg": "next",
       "setupName": "KernelSU-Next",
       "needPatch": false,
@@ -62,7 +62,7 @@
     "AnyKernel3": {
       "use": true,
       "release": true,
-      "repo": "https://github.com/kernel-build-from-rainyland/AnyKernel3",
+      "repo": "https://github.com/DR-KernelArchive/AnyKernel3",
       "branch": "sweet"
     },
     "image": {
@@ -90,7 +90,7 @@
     },
     "kernelsu": {
       "enable": true,
-      "setupLink": "https://raw.githubusercontent.com/kernel-build-from-rainyland/KernelSU-Next/refs/heads/next/kernel/setup.sh",
+      "setupLink": "https://raw.githubusercontent.com/DR-KernelArchive/KernelSU-Next/refs/heads/next/kernel/setup.sh",
       "setupArg": "next",
       "setupName": "KernelSU-Next",
       "needPatch": false,
@@ -133,7 +133,7 @@
     "AnyKernel3": {
       "use": true,
       "release": true,
-      "repo": "https://github.com/kernel-build-from-rainyland/AnyKernel3",
+      "repo": "https://github.com/DR-KernelArchive/AnyKernel3",
       "branch": "sweet"
     },
     "image": {

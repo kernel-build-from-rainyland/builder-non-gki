@@ -201,7 +201,7 @@ git push
 
 ## 4. Prepare and Build workflow
 
-Fork repo <https://github.com/kernel-build-from-rainyland/builder-non-gki> (Like I said in step 1). Create a file in `.github/configs/production/ksun` (Use add file button)
+Fork repo <https://github.com/DR-KernelArchive/builder-non-gki> (Like I said in step 1). Create a file in `.github/configs/production/ksun` (Use add file button)
 
 Type `<device_manufacture>/<device_codename.json>` on name your file field (It will automatically create a folder for this so don't worry)
 
@@ -215,7 +215,7 @@ Use this config template below (remove the comments before continue)
     "name": "moonwake-kernelsu-next", // type whatever you want here
     "defconfig": "ruby_defconfig", // the defconfig name in arch/arm64/configs folder. Choose the one have your device codename
     "extraConfig": "", // leave this empty if you dont have any extra config file like vendor/venus_QGKI.config
-    "repo": "https://github.com/kernel-build-from-rainyland/kernel_xiaomi_ruby", // the kernel source link you forked and modified
+    "repo": "https://github.com/DR-KernelArchive/kernel_xiaomi_ruby", // the kernel source link you forked and modified
     "branch": "ksu-type-root-impl" // the branch if the kernel source forked and modified. Open kernel source link again and see the button below kernel source name, you will see the branch you modified
   },
   "output_image": "Image",
@@ -265,13 +265,13 @@ Use this config template below (remove the comments before continue)
   },
   "image": {
     "use": true, // If you don't use boot.img method, disable this
-    "imageUrl": "https://github.com/kernel-build-from-rainyland/kernel_xiaomi_ruby/releases/download/cloud/boot.img", // Link if that boot.img
+    "imageUrl": "https://github.com/DR-KernelArchive/kernel_xiaomi_ruby/releases/download/cloud/boot.img", // Link if that boot.img
     "imageName": "boot.img" // File name of that boot.img
   },
   "AnyKernel3": {
     "use": false, // If you use Anykernel method, enable this
     "release": true,
-    "repo": "https://github.com/kernel-build-from-rainyland/AnyKernel3", // Your anykernel link, just find it somewhere in github. or clone it from https://github.com/kernel-build-from-rainyland/AnyKernel3. delete device.name2=sunny and edit device.name1=mojito to your device codename
+    "repo": "https://github.com/DR-KernelArchive/AnyKernel3", // Your anykernel link, just find it somewhere in github. or clone it from https://github.com/DR-KernelArchive/AnyKernel3. delete device.name2=sunny and edit device.name1=mojito to your device codename
     "branch": "ruby" // the branch of that anykernel
   }
 }

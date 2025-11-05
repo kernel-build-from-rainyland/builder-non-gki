@@ -11,7 +11,7 @@
     },
     "output_image": "Image.gz-dtb",
     "use_python2": false,
-    "additional_script_link": "https://github.com/kernel-build-from-rainyland/builder-non-gki/raw/main/scripts/xiaomi_ruby/exp-version.sh",
+    "additional_script_link": "https://github.com/DR-KernelArchive/KernelActions/raw/main/scripts/xiaomi_ruby/exp-version.sh",
     "additional_post_script_link": "disabled",
     "kp": {
       "use": false,
@@ -66,7 +66,7 @@
     "AnyKernel3": {
       "use": true,
       "release": true,
-      "repo": "https://github.com/kernel-build-from-rainyland/AnyKernel3",
+      "repo": "https://github.com/DR-KernelArchive/AnyKernel3",
       "branch": "ruby_dev"
     }
   },
@@ -82,14 +82,14 @@
     },
     "output_image": "Image.gz-dtb",
     "use_python2": false,
-    "additional_script_link": "https://github.com/kernel-build-from-rainyland/builder-non-gki/raw/main/scripts/xiaomi_ruby/exp-version.sh",
+    "additional_script_link": "https://github.com/DR-KernelArchive/KernelActions/raw/main/scripts/xiaomi_ruby/exp-version.sh",
     "kp": {
       "use": false,
       "kpimg_link": "https://github.com/SukiSU-Ultra/SukiSU_KernelPatch_patch/releases/download/0.12.0/kpimg"
     },
     "kernelsu": {
       "enable": true,
-      "setupLink": "https://raw.githubusercontent.com/kernel-build-from-rainyland/KernelSU-Next/refs/heads/next/kernel/setup.sh",
+      "setupLink": "https://raw.githubusercontent.com/DR-KernelArchive/KernelSU-Next/refs/heads/next/kernel/setup.sh",
       "setupArg": "next",
       "setupName": "KernelSU-Next",
       "needPatch": false,
@@ -136,7 +136,7 @@
     "AnyKernel3": {
       "use": true,
       "release": true,
-      "repo": "https://github.com/kernel-build-from-rainyland/AnyKernel3",
+      "repo": "https://github.com/DR-KernelArchive/AnyKernel3",
       "branch": "ruby_dev"
     }
   },
@@ -152,14 +152,14 @@
     },
     "output_image": "Image.gz-dtb",
     "use_python2": false,
-    "additional_script_link": "https://github.com/kernel-build-from-rainyland/builder-non-gki/raw/main/scripts/xiaomi_ruby/exp-version.sh",
+    "additional_script_link": "https://github.com/DR-KernelArchive/KernelActions/raw/main/scripts/xiaomi_ruby/exp-version.sh",
     "kp": {
       "use": true,
       "kpimg_link": "https://github.com/SukiSU-Ultra/SukiSU_KernelPatch_patch/releases/download/0.12.0/kpimg"
     },
     "kernelsu": {
       "enable": true,
-      "setupLink": "https://raw.githubusercontent.com/kernel-build-from-rainyland/SukiSU-Ultra/main/kernel/setup.sh",
+      "setupLink": "https://raw.githubusercontent.com/DR-KernelArchive/SukiSU-Ultra/main/kernel/setup.sh",
       "setupArg": "susfs-main",
       "setupName": "KernelSU",
       "needPatch": false,
@@ -206,7 +206,7 @@
     "AnyKernel3": {
       "use": true,
       "release": true,
-      "repo": "https://github.com/kernel-build-from-rainyland/AnyKernel3",
+      "repo": "https://github.com/DR-KernelArchive/AnyKernel3",
       "branch": "ruby_dev"
     }
   }
