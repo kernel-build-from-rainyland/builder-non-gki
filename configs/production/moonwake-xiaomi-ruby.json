@@ -86,7 +86,7 @@
     "additional_post_script_link": "disabled",
     "kp": {
       "use": false,
-      "kpimg_link": "https://github.com/SukiSU-Ultra/SukiSU_KernelPatch_patch/releases/download/0.12.0/kpimg"
+      "kpimg_link": ""
     },
     "kernelsu": {
       "enable": true,
@@ -147,7 +147,7 @@
       "vendor": "xiaomi",
       "name": "moonwake-sukisu",
       "defconfig": "ruby_defconfig",
-      "extraConfig": "vendor/bbr.config vendor/noop.config vendor/lru.config vendor/kernelsu.config vendor/susfs.config vendor/kernelpatch.config",
+      "extraConfig": "vendor/bbr.config vendor/noop.config vendor/lru.config vendor/kernelsu.config vendor/susfs.config",
       "repo": "https://github.com/RainyXeon/moonwake_kernel_xiaomi_ruby",
       "branch": "main"
     },
@@ -156,8 +156,8 @@
     "additional_script_link": "disabled",
     "additional_post_script_link": "disabled",
     "kp": {
-      "use": true,
-      "kpimg_link": "https://github.com/SukiSU-Ultra/SukiSU_KernelPatch_patch/releases/download/0.12.0/kpimg"
+      "use": false,
+      "kpimg_link": ""
     },
     "kernelsu": {
       "enable": true,
