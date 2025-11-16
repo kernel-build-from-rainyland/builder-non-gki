@@ -78,7 +78,7 @@
       "defconfig": "ruby_defconfig",
       "extraConfig": "vendor/debug.config vendor/bbr.config vendor/noop.config vendor/lru.config vendor/kernelsu.config vendor/susfs.config",
       "repo": "https://github.com/RainyXeon/moonwake_kernel_xiaomi_ruby",
-      "branch": "experimental"
+      "branch": "temp-exp"
     },
     "output_image": "Image.gz-dtb",
     "use_python2": false,
@@ -159,8 +159,8 @@
     },
     "kernelsu": {
       "enable": true,
-      "setupLink": "https://raw.githubusercontent.com/DR-KernelArchive/SukiSU-Ultra/main/kernel/setup.sh",
-      "setupArg": "susfs-main",
+      "setupLink": "https://raw.githubusercontent.com/DeepinRain/SukiSU-Ultra/susfs/kernel/setup.sh",
+      "setupArg": "susfs",
       "setupName": "KernelSU",
       "needPatch": false,
       "susfsLink": ""
